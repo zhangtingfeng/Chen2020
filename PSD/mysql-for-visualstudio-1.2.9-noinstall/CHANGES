@@ -1,0 +1,110 @@
+1.2.9
+- Added support for VS2019.
+- Removed support for VS2012 and VS2013.
+- Fixed a bug that prevented the generation of TableAdapters due to a null reference exception
+  (MySql bug #90390, Oracle Bug #27857627).
+- Fixed a bug that prevented the creation of data sources due to a failure during the generation of a connection object
+  when MySQL Connector/NET 6.10.9+ is installed (MySql bug #91136, Oracle Bug #28148998).
+- Fixed a bug that prevented the generation of table adapters when Connector/NET was installed due to a conflict
+  with the MySql.Data library. This issue also affected other operations such as attempting to edit a table from the Server
+  Explorer. Additional to that, the Configuration Update Tool was added which monitors changes in the installation of Connector/NET
+  and when launched, updates MySQL for Visual Studio to be compatible (MySql Bug #82617, Oracle bug #29884031).
+- Added validation to prevent Visual Studio from closing unexpectedly when the user attempted to execute a MySQL script
+  associated with a closed connection in the Server Explorer (Oracle Bug #29797340).
+- The MySQL Workbench and MySQL Utilities buttons located in the MySQL toolbar are now always enabled, instead of being
+  enabled only when a connection was selected in the Server Explorer (Oracle Bug #29797355).
+- Fixed a bug where attempting to modify the existing installation using the MSI would allow users to target the installation to
+  versions of Visual Studio that are not actually installed (MySql Bug #96576, Oracle Bug #30225436).
+
+
+1.2.8
+- Added support for MySQL 8 server features.
+- Fixed a bug in which the installation would roll back when Visual Studio 2017 failed to execute devenv commands. This is a
+  known issue in Windows 7 environments caused by faulty user permissions. The installer was modified to display a warning
+  message in such cases with instructions on how to proceed (MySql Bug #87902, Oracle Bug #27365261).
+- Fixed a bug that prevented the MySql.Web assembly from being loaded when using the MySQL Website Configuration Tool
+  due to an incorrect way of identifying the version of the assembly (MySql Bug #89446, Oracle Bug #27450530).
+- Fixed a bug in which the "Alter Routine" option failed to retrieve the definition of a Store Procedure (Oracle Bug #27669339).
+- Upgraded MySQL for Visual Studio to require .NET 4.5.2 or greater when installed.
+
+
+1.2.7
+- Added support for VS2017.
+- Removed support for VS2010.
+- Fixed a problem which prevented MySQL scripts from detecting keyboard input for keys such as Enter,
+  Backspace, Arrows, etc. This would only happen after saving the script for the first time.
+  (Bug #25713638 - SCRIPT CAN'T GET EDITED AFTER SAVING IT).
+- Fixed bug which caused the currently selected schema's db objects to become unselected in the Tree view after unselecting
+  a different schema from the Schema list. (Bug #25713981 - EXPORT TOOL IS EXPORTING THE WRONG SCHEMA)
+
+
+1.2.6
+- Fix a bug which prevent users to create a non MySql connection in the Server Explorer pane in VisualStudio 
+  after the user create a MySql Connection checking the option "Always use this selection" when selecting 
+  the Data Source and Data Provider (MySql Bug #77441, Oracle bug #22122881)
+- Fixed the bug that was preventing to "Generate Database from Model" in an existing "edmx" model,
+  caused by an invalid path to the Connector/NET assembly in the MySQL T4 templates files 
+  (MySql Bug #74388, Oracle bug #20234532).
+- Fixed the error being thrown when working with an empty "edmx" model and attempt to generate a database
+  from model, due an invalid data in the MySQL "ttinclude" file (Oracle bug #18181649).
+- Create a powershell scripts to handle the uninstall/upgrade issue present in any M4VS plugin versions 
+  prior to 1.2.5, when having installed VS2012, or VS2013 or VS2015 and the M4VS plugin < 1.2.5, and then
+  uninstall VS first, so when trying to uninstall the M4VS the uninstall/upgrade process was being rolled-back.
+- Fixed the M4VS plugin version shown in the "Extensions and Updates" Visual Studio menu to reflect the latest
+  released version (Oracle bug #22114385).
+
+
+1.2.5
+- Fixed the bug where the "MySQL Workbench" and "MySQL Utilities" buttons were disabled (Oracle Bug #21495692).
+- Fixed the bug with the M4VS installer where having any plugin version installed on any Visual Studio
+  version, and then uninstall Visual Studio first, the M4VS plugin couldn't be uninstalled or upgraded
+  (MySQL Bug #71226, Oracle Bug #21953055).
+- Remove the "Project Templates" option from the plugin toolbar button and from the "File -> New -> Project" menu, 
+  in order to add the "Item Templates" feature with two options: MySQL MVC Item and MySQL Windows Forms Item, 
+  available as a context menu for existing projects, which will add a new windows forms or MVC controllers/views 
+  connected to MySQL. There is a known issue with item templates not working correctly with MySQL Server 5.7.x,
+  avoiding the user to create the entity framework model.
+- Added the "Entity Framework" option to the MySQL Website Configuration Dialog, for web projects, so Entity Framework
+  version 5 or 6 can be used with a MySQL database provider, automatically adding the configuration/references needed
+  to the web.config file and the project itself.
+- Fixed the bug where the dataset designer wizard was not showing the stored procedure parameters when creating a 
+  "TableAdapter" using existing stored procedures for the "Select" command. Also, fixed the bug where the stored procedure
+  command having an "error" command was avoiding the dataset to be created (MySQL Bug #74195, Oracle Bug #20233133).
+  
+
+1.2.4
+- Removed support for VS2008.
+- Added support for VS2015 so the plugin can be installed properly (MySQL Bug #77708, Oracle Bug #21438524).
+- Fix for MySQL parser does not support new syntax in 'explain' for grammar 5.7 (Oracle Bug #19431740).
+
+
+1.2.3
+- Add the support to handle the Simple Membership Web Provider configuration in the Web Configuration Tool.
+- Fix for web configuration tool doesn't use the web.config from the startup project by default when using the 
+  Web Configuration Tool (Oracle Bug #19166855).
+
+
+1.2.2
+- Added support for Multiple tables application generation in MySQL Windows Forms Wizard.
+
+
+1.2.1
+- Added implementation of Create New MySQL Project dialog and new Create New MySQL project in MySQL Toolbar.
+- Added VB.NET support for Windows Forms Project Wizard.
+- Added Master Detail support for Windows Forms Project Wizard.
+- Added DataGrid support for Windows Forms Project Wizard.
+- Added Entity Framework v5 & v6 for Windows Forms Project Wizard.
+- Added implementation of MVC pattern of selected model tables for MVC Project.
+- Added action links of generated views in home page for MVC project.
+- Fix for Connect to database dialog not updated properly.
+
+
+1.2.0
+- Added Implementation of IWizard to create MySQL MVC project.
+- Added implementation of Windows Forms Template project.
+- Fix for Project Templates Wizards shows error Cannot load MySql.Visual studio assembly.
+- Added changes for web configuration tool for Site Map provider.
+- Added changes for web configuration tool for Personalization Map provider.
+
+
+

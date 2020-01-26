@@ -1,0 +1,33 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 6000 (ID=0x1626)
+    Vendor:   Intel
+    VRAM:     2151 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Works\Chen2020\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Works\Chen2020\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Works\Chen2020\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Works\Chen2020\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Works\Chen2020\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Works\Chen2020\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Works\Chen2020\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Works\Chen2020\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.097 seconds
+Platform assembly: D:\Works\Chen2020\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Works\Chen2020\test_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 1.316408 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: e20 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 12.492796 ms
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 433.
+Total: 0.998968 ms (FindLiveObjects: 0.055751 ms CreateObjectMapping: 0.038115 ms MarkObjects: 0.769137 ms  DeleteObjects: 0.110364 ms)
+
